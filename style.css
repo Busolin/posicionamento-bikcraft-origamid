@@ -6,6 +6,7 @@
   --branco: #ffffff;
 }
 
+/* General CSS */
 html {
   font-family: Arial;
 }
@@ -13,6 +14,11 @@ html {
 body {
   background-color: var(--cinza);
   margin-top: 40px;
+}
+
+img {
+  display: block;
+  max-width: 100%;
 }
 
 /* Header */
@@ -51,6 +57,48 @@ body {
 
 .headerList li a:hover {
   border-color: var(--vermelho);
+}
+
+/* Main and Articles*/
+main {
+  margin-top: 60px;
+}
+
+.bikesMadeByHand {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  text-align: right;
+  background-color: var(--branco);
+}
+
+.leftSection {
+  display: grid;
+
+  align-content: center;
+  justify-items: end;
+
+  gap: 20px;
+  padding: 40px;
+}
+
+.leftSection h1 {
+  font-size: 2rem;
+}
+
+.leftSection p {
+  font-size: 1.25rem;
+}
+
+.buttonSeeMore {
+  background-color: var(--vermelho);
+  color: var(--branco);
+
+  padding: 1rem 2rem;
+  border-radius: 4px;
+
+  text-transform: uppercase;
+  text-decoration: none;
 }
 
 /* Container */
