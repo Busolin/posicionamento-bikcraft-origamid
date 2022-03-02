@@ -45,6 +45,12 @@ body {
 
   text-decoration: none;
   text-transform: uppercase;
+
+  border: 2px solid transparent;
+}
+
+.headerList li a:hover {
+  border-color: var(--vermelho);
 }
 
 /* Container */
