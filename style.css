@@ -2,6 +2,7 @@
   --cinza: #f7f7f7;
   --cinza-escuro: #c6c6c6;
   --vermelho: #ee2211;
+  --vermelho-escuro: #900900;
   --preto: #000000;
   --branco: #ffffff;
 }
@@ -57,12 +58,15 @@ img {
 
 .headerList li a:hover {
   border-color: var(--vermelho);
+  transition: 0.2s;
 }
 
 /* Main and Articles*/
 main {
   margin-top: 60px;
 }
+
+/* First Article */
 
 .bikesMadeByHand {
   display: grid;
@@ -104,6 +108,11 @@ main {
   text-decoration: none;
 }
 
+.buttonSeeMore:hover {
+  background-color: var(--vermelho-escuro);
+  transition: 0.2s;
+}
+
 .leftSection::after {
   content: "";
   display: block;
@@ -132,6 +141,75 @@ main {
 
   .leftSection::after {
     display: none;
+  }
+}
+
+/* Second Article */
+
+.benefitsBikcraft {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+}
+
+.benefitsBikcraft h1 {
+  font-size: 4rem;
+
+  text-align: right;
+  text-transform: uppercase;
+
+  padding: 40px;
+  color: var(--cinza-escuro);
+
+  background: url(./assets/img/onda.svg);
+}
+
+.rightSection {
+  background-color: var(--branco);
+  padding: 30px;
+}
+
+.item {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 5px 20px;
+  padding: 20px;
+}
+
+.item:nth-child(odd) {
+  background-color: var(--cinza);
+}
+
+.item h2 {
+  font-size: 1.2rem;
+}
+
+.item p {
+  grid-column: 2 / -1;
+  margin-bottom: 20px;
+
+  font-size: 1.25rem;
+  line-height: 1.3;
+}
+
+.item:hover {
+  border-left: 3px solid var(--vermelho);
+}
+
+@media (max-width: 950px) {
+  .benefitsBikcraft {
+    grid-template-columns: 1fr;
+  }
+
+  .benefitsBikcraft h1 {
+    font-size: 3rem;
+    text-align: center;
+  }
+}
+
+@media (max-width: 400px) {
+  .benefitsBikcraft h1 {
+    font-size: 2rem;
   }
 }
 
