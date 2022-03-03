@@ -80,6 +80,8 @@ main {
 
   gap: 20px;
   padding: 40px;
+
+  position: relative;
 }
 
 .leftSection h1 {
@@ -88,6 +90,7 @@ main {
 
 .leftSection p {
   font-size: 1.25rem;
+  line-height: 1.3;
 }
 
 .buttonSeeMore {
@@ -99,6 +102,37 @@ main {
 
   text-transform: uppercase;
   text-decoration: none;
+}
+
+.leftSection::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 4px;
+  background-color: var(--vermelho);
+  position: absolute;
+  top: 30px;
+  right: -30px;
+}
+
+.bikesMadeByHand img {
+  object-fit: cover;
+  height: 100%;
+}
+
+@media (max-width: 700px) {
+  .bikesMadeByHand {
+    grid-template-columns: 1fr;
+  }
+
+  .leftSection {
+    text-align: center;
+    justify-items: center;
+  }
+
+  .leftSection::after {
+    display: none;
+  }
 }
 
 /* Container */
