@@ -22,6 +22,11 @@ img {
   max-width: 100%;
 }
 
+p {
+  font-size: 1.25rem;
+  line-height: 1.3;
+}
+
 /* Header */
 .header {
   display: grid;
@@ -61,6 +66,12 @@ img {
   transition: 0.2s;
 }
 
+@media (max-width: 500px) {
+  body {
+    margin-top: 20;
+  }
+}
+
 /* Main and Articles*/
 main {
   margin-top: 60px;
@@ -90,11 +101,6 @@ main {
 
 .leftSection h1 {
   font-size: 2rem;
-}
-
-.leftSection p {
-  font-size: 1.25rem;
-  line-height: 1.3;
 }
 
 .buttonSeeMore {
@@ -166,14 +172,14 @@ main {
 
 .rightSection {
   background-color: var(--branco);
-  padding: 30px;
+  padding: 40px;
 }
 
 .item {
   display: grid;
   grid-template-columns: auto 1fr;
   gap: 5px 20px;
-  padding: 20px;
+  padding: 15px;
 }
 
 .item:nth-child(odd) {
@@ -187,13 +193,10 @@ main {
 .item p {
   grid-column: 2 / -1;
   margin-bottom: 20px;
-
-  font-size: 1.25rem;
-  line-height: 1.3;
 }
 
 .item:hover {
-  border-left: 3px solid var(--vermelho);
+  border-left: 4px solid var(--vermelho);
 }
 
 @media (max-width: 950px) {
@@ -211,6 +214,18 @@ main {
   .benefitsBikcraft h1 {
     font-size: 2rem;
   }
+}
+
+/* Footer */
+
+.footer {
+  margin-top: 60px;
+  padding: 60px;
+
+  background-color: var(--branco);
+
+  box-sizing: border-box;
+  text-align: center;
 }
 
 /* Container */
